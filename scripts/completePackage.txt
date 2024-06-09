@@ -86,6 +86,7 @@ cinnamon-session-common
 cinnamon-settings-daemon
 circle-flags-svg
 cjs
+code
 colord
 colord-data
 command-not-found
