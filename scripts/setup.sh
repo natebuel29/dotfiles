@@ -1,3 +1,9 @@
+if [ -e /etc/apt/preferences.d/nosnap.pref]
+then
+    sudo rm /etc/apt/preferences.d/nosnap.pref
+else
+    echo "nosnap file already removed"
+fi
 sudo xargs -a completePackage.txt apt install
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -13,4 +19,4 @@ cd fonts
 cd ..
 rm -rf fonts
 
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestionsq
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
